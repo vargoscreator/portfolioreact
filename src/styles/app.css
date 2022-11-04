@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
+	height: 100%;
+	min-width: 257px;
+}
+.body.lock {
+	overflow: hidden;
+}
+.container {
+	max-width: 1220px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.all__content{
+	display: none;
+}
+.all__content.active{
+	display: block;
+}
