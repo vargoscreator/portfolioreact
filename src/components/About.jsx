@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 const About = () => {
 
 	const {t} = useTranslation();
-	
 
     return (
         <div className="about" id="about">
@@ -92,7 +91,7 @@ const About = () => {
 							</div>
 						</div>
 					</div>
-					<a className="main__btn" href="#work">{t('main__btn')}</a>
+					<a className="main__btn" href="#work">{t('work title')}</a>
 				</div>
 				<hr/>
 			</div>

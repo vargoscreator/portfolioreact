@@ -35,7 +35,6 @@
 }
 .about__item:hover {
 	transition: all 0.2s;
-	background-color: rgba(100, 218, 212, 0.2);
 }
 .about__spec {
 	font-size: 32px;

@@ -221,8 +221,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "ua",
-    whitelist: ["ua", "ru", "en"],
+    defaultLanguage: "ua",
+    whitelist: ["ru", "ua", "en"],
     debug: false,
     detecrion: {
         order: ["localStorage","cookie"],

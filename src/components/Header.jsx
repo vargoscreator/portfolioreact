@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../styles/header.css';
 import svg from '../img/logo.svg';
 import $ from 'jquery'; 
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
+
 
 const Header = () => { 
 
@@ -14,7 +14,8 @@ const Header = () => {
     const x = document.getElementById('header__title');
     x.innerText = t('header title');
 
-    useEffect(() => {         
+
+    window.onload = function() {
         if(i18n.language === "ua"){
             $(".header__lang").eq(0).addClass("select");
         }
@@ -29,7 +30,9 @@ const Header = () => {
             $(".header__lang").removeClass("select");
             $(this).addClass("select");
         });
-    }, []);
+    };
+
+    
 
     
     $(window).scroll(function() {
@@ -52,6 +55,24 @@ const Header = () => {
         header_menu.classList.toggle('active');
         header__overlay.classList.toggle('lock');
         header__list.classList.toggle('active');
+    }
+
+
+
+    function popupActive() {
+        const hideHeader = document.getElementsByClassName('header__list')[0];
+        hideHeader.classList.toggle('hiddenLink');
+        const popup = document.getElementsByClassName('popup__bg')[0];
+        popup.classList.toggle('active');
+        const popu2p = document.getElementsByClassName('popup')[0];
+        popu2p.classList.toggle('active');
+        const bodyclick = document.querySelector('body');
+        bodyclick.classList.toggle('hidden');
+        const pageWidth = document.documentElement.scrollWidth;
+        if (pageWidth < 878) {
+            burgerActive();
+        }
+
     }
 
     return (
@@ -90,6 +111,7 @@ const Header = () => {
                                     </li>
                                 </div>
                             </ul>
+                            <div className="header__cv" onClick={popupActive}>CV</div>
                         </nav>
                         <div className="header__burger" onClick={burgerActive}>
                             <span></span>

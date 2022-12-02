@@ -8,6 +8,7 @@ import icon3 from '../img/main/icon-3.svg';
 
 const Main = () => {
     const {t} = useTranslation();
+
     return (
         <div className="main active" id="main">
             <div className="container">

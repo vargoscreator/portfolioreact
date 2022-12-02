@@ -9,6 +9,7 @@ import Reviews from '../components/Reviews';
 import Works from '../components/Works';
 import $ from 'jquery'; 
 import { useEffect } from 'react';
+import Popup from '../components/Popup';
 const Home = () => {
     useEffect(() => {
 
@@ -98,6 +99,7 @@ const Home = () => {
                 <Contact/>
                 <Footer/>
             </section>
+            <Popup/>
         </>
     );
 };
