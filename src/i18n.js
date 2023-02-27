@@ -70,7 +70,23 @@ const resources = {
       "footer": "",
       "footer about": "My skills",
       "footer work": "My works",
-      "footer contact": "Contacts"
+      "footer contact": "Contacts",
+
+      "popup contact": "Contact",
+      "popup city": "Ukraine, Kiyv",
+      "popup skills": "Skills",
+      "popup lang": "Languages",
+      "popup name": "Vasyl Horiuk",
+      "popup descr": "Hello, my name is Vasil and I love creating new things. For this I usually use Html, css and JS. The result of what I create makes me very happy.",
+      "popup education": "Education",
+      "popup education-name": "State University of Trade and Economics",
+      "popup education-descr": "Faculty of Information Technology - Cyber Security",
+      "popup experience": "Experience",
+      "popup experience-name": "Freelance",
+      "popup experience-descr": "Website layout (Html, css, js) / Editing errors in the code (PHP, JS)",
+      "popup data": "Jan",
+      "popup present": "present"
+
   }
   },
   ua: {
@@ -140,8 +156,24 @@ const resources = {
       "footer": "",
       "footer about": "Мої навички",
       "footer work": "Мої роботи",
-      "footer contact": "Контакти"
-  }
+      "footer contact": "Контакти",
+
+      "popup contact": "Контакти",
+      "popup city": "Україна, Київ",
+      "popup skills": "Навички",
+      "popup lang": "Мови",
+      "popup name": "Василь Горюк",
+      "popup descr": "Привіт, мене звати Василь і я люблю створювати нові речі. Для цього я зазвичай використовую Html, css і JS. Результат того, що я створюю робить мене дуже щасливим.",
+      "popup education": "Освіта",
+      "popup education-name": "Державний торговельно-економічний університет",
+      "popup education-descr": "Факультет інформаційних технологій - Кібербезпека",
+      "popup experience": "Досвід",
+      "popup experience-name": "Фріланс",
+      "popup experience-descr": "Верстка сайту (Html, css, js) / Редагування помилок у коді (PHP, JS)",
+      "popup data": "Січ",
+      "popup present": "теперішній час"
+
+    }
   },
   ru: {
     translation: {
@@ -210,7 +242,23 @@ const resources = {
       "footer": "",
       "footer about": "Мои навыки",
       "footer work": "Мои работы",
-      "footer contact": "Контакты"
+      "footer contact": "Контакты",
+
+      "popup contact": "Контакты",
+      "popup city": "Украина, Киев",
+      "popup skills": "Навыки",
+      "popup lang": "Языки",
+      "popup name": "Василь Горюк",
+      "popup descr": "Привет, меня зовут Василь, и я люблю создавать новые вещи. Для этого я обычно использую Html, CSS и JS. Результат того, что я создаю, делает меня очень счастливым.",
+      "popup education": "Образование",
+      "popup education-name": "Государственный торгово-экономический университет",
+      "popup education-descr": "Факультет информационных технологий - Кибербезопасность",
+      "popup experience": "Опыт",
+      "popup experience-name": "Фриланс",
+      "popup experience-descr": "Верстка сайта (Html, css, js) / Редактирование ошибок в коде (PHP, JS)",
+      "popup data": "Янв",
+      "popup present": "настоящее время"
+
   }
   }
 };

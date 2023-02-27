@@ -177,7 +177,7 @@
 }
 
 
-@media (max-width: 877px) {
+@media (max-width: 904px) {
     .header__link:hover:after {
 		width: 0;
 		/*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/

@@ -173,10 +173,6 @@ hr {
 
 
 @media (max-width: 856px) { 
-	.header__cv{
-		left: 50%;
-		transform: translate(-50%, 0);
-	}
     .main__inner {
 		height: 93vh;
 		display: flex;

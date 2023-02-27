@@ -179,6 +179,7 @@
     font-size: 14px;
     text-align: center;
     margin-bottom: 65px;
+    line-height: 23px;
 }
 
 .popup__right-name{
@@ -275,6 +276,13 @@
         display: block;
     }
 }
+@media (max-width: 904px) {
+    .header__cv{
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
 
 @media (max-width: 700px) {
     .popup{

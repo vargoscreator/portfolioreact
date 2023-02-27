@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../styles/popup.css';
 import img from '../img/main/Vargos.png';
 import maps from '../img/popup/map.png';
@@ -7,11 +7,11 @@ import linked from '../img/popup/linked.png';
 import mail from '../img/popup/mail.png';
 import telegram from '../img/popup/telegram.png';
 import icon from '../img/popup/icon.svg';
+import { useTranslation } from 'react-i18next';
 
-export default class Popup extends Component {
-    
-  render() {
-    
+const Popup = () => {
+
+	const {t} = useTranslation();
     function popupActive() {
         const hideHeader = document.getElementsByClassName('header__list')[0];
         hideHeader.classList.toggle('hiddenLink');
@@ -23,9 +23,8 @@ export default class Popup extends Component {
         bodyclick.classList.toggle('hidden');
     }
 
-
     return (
-      <div className='popup__bg'>
+        <div className='popup__bg'>
         <div className="popup">
             <div className="popup__left-content">
                 <div className="popup__left-myImg">
@@ -33,12 +32,12 @@ export default class Popup extends Component {
                     <div className="popup__left-bg"></div>
                 </div>
                 <div className="popup__left-item">
-                    <div className="popup__contact-name">Contact</div>
+                    <div className="popup__contact-name">{t('popup contact')}</div>
                     <div className="popup__contact-item">
                         <div className="popup__contact-icon">
                             <img alt="img" className="popup__contact-img" src={maps}/>
                         </div>
-                        <div className="popup__contact-title">Ukraine, Kiyv</div>
+                        <div className="popup__contact-title">{t('popup city')}</div>
                     </div>
                     <a className="popup__contact-item" href='mailto:bacahoriyk@gmail.com'>
                         <div className="popup__contact-icon">
@@ -66,7 +65,7 @@ export default class Popup extends Component {
                     </a>
                 </div>
                 <div className="popup__left-item">
-                    <div className="popup__contact-name">Skills</div>
+                    <div className="popup__contact-name">{t('popup skills')}</div>
                     <div className="popup__contact-item">
                         <div className="popup__contact-icon">
                             <img alt="img" className="popup__contact-img" src={icon}/>
@@ -105,7 +104,7 @@ export default class Popup extends Component {
                     </div>
                 </div>
                 <div className="popup__left-item">
-                    <div className="popup__contact-name">Languages</div>
+                    <div className="popup__contact-name">{t('popup lang')}</div>
                     <div className="popup__contact-item">
                         <div className="popup__contact-title">UA</div>
                         <div className="popup__contact-icon">
@@ -149,36 +148,33 @@ export default class Popup extends Component {
             </div>
 
             <div className="popup__right-content">
-                <div className='popup__right-my--name'>Vasyl Horiuk</div>
+                <div className='popup__right-my--name'>{t('popup name')}</div>
                 <div className='popup__right-posada'>Front-End developer</div>
                 <div className="popup__right-descr">
-                    <div className="popup__right-about">
-                        Hello, my name is Vasil and I love creating new things.
-                        For this I usually use Html, css and JS. The result of what I create makes me very happy
-                    </div>
+                    <div className="popup__right-about">{t('popup descr')}</div>
                     <div className="popup__right-items">
-                        <div className="popup__right-name">Education</div>
+                        <div className="popup__right-name">{t('popup education')}</div>
                         <div className="popup__right-item">
                             <div className="popup__right-title">
-                                <div className="popup__right-name--1">State University of Trade and Economics</div>
+                                <div className="popup__right-name--1">{t('popup education-name')}</div>
                                 <div className="popup__right-date">2019 - 2023</div>
                             </div>
                             <div className="popup__right-descr">
-                                <div className="popup__right-name--2">Faculty of Information Technology - Cyber Security</div>
+                                <div className="popup__right-name--2">{t('popup education-descr')}</div>
                             </div>                    
                         </div>                    
                     </div>
 
                     <div className="popup__right-items">
-                        <div className="popup__right-name">Experience</div>
+                        <div className="popup__right-name">{t('popup experience')}</div>
                         <div className="popup__right-item">
                             <div className="popup__right-title">
-                                <div className="popup__right-name--1">Freelance</div>
-                                <div className="popup__right-date">Jan 2022 - present</div>
+                                <div className="popup__right-name--1">{t('popup experience-name')}</div>
+                                <div className="popup__right-date">{t('popup data')} 2022 - {t('popup present')}</div>
                             </div>
                             <div className="popup__right-descr">
                                 <div className="popup__right-name--2">Front-end Developer</div>
-                                <div className="popup__right-name--descr">Website layout (Html, css, js) / Editing errors in the code (PHP, JS)</div>
+                                <div className="popup__right-name--descr">{t('popup experience-descr')}</div>
                             </div>                    
                         </div>                    
                     </div>
@@ -190,6 +186,7 @@ export default class Popup extends Component {
         </div>
         <div className="popup__close-bg" onClick={popupActive}></div>
       </div>
-    )
-  }
-}
+    );
+};
+
+export default Popup;

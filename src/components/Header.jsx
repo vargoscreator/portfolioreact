@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import '../styles/header.css';
 import svg from '../img/logo.svg';
 import $ from 'jquery'; 
@@ -6,7 +6,8 @@ import { useTranslation } from 'react-i18next';
 
 
 const Header = () => { 
-
+    
+    
     const {t, i18n} = useTranslation();
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
@@ -30,6 +31,16 @@ const Header = () => {
             $(".header__lang").removeClass("select");
             $(this).addClass("select");
         });
+
+        const pageWidth = document.documentElement.scrollWidth;
+        if (pageWidth < 905) {
+            for (let i = 0; i < 4; i++) {
+                document.getElementsByClassName("header__list")[0].childNodes[i].childNodes[0].addEventListener("click", function x(e){
+                    burgerActive();
+                });
+            }
+        }
+
     };
 
     
@@ -74,6 +85,8 @@ const Header = () => {
         }
 
     }
+
+
 
     return (
         <header className="header">
